@@ -27,11 +27,12 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "echo 'vagrant' | sudo -E -S bash '{{.Path}}'",
+      "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S bash '{{.Path}}'",
       "scripts": [
         "scripts/fix-slow-dns.sh",
         "scripts/sshd.sh",
         "scripts/vagrant.sh",
+        "scripts/vbox.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
       ]

@@ -41,7 +41,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "centos-6.5-amd64-plain.box"
+      "output": "../../boxes/centos-6.5-amd64-plain.box"
     }
   ]
 }

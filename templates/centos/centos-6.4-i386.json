@@ -41,7 +41,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "centos-6.4-i386-plain.box"
+      "output": "../../boxes/centos-6.4-i386-plain.box"
     }
   ]
 }

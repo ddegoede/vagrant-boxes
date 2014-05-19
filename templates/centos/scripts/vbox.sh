@@ -5,13 +5,9 @@ if [[ $PACKER_BUILDER_TYPE =~ virtualbox ]]; then
     # from the install media via ks.cfg
 
     VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
-    echo "Vbox version: $VBOX_VERSION"
     mount -o loop /home/vagrant/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
-    echo "mount VBoxGuestAdditions_$VBOX_VERSION"
     sh /mnt/VBoxLinuxAdditions.run --nox11
-    echo "Install VBoxLinuxAdditions"
     umount /mnt
-    echo "umount..."
     rm -rf /home/vagrant/VBoxGuestAdditions_$VBOX_VERSION.iso
 
     if [[ $VBOX_VERSION = "4.3.10" ]]; then

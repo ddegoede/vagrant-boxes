@@ -16,4 +16,4 @@ if [[ $PACKER_BUILDER_TYPE =~ virtualbox ]]; then
 fi
 
 # Removing packages needed for building guest tools
-yum -y remove gcc cpp kernel-devel kernel-headers perl
+yum -y remove gcc cpp kernel-devel kernel-headers 

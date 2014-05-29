@@ -25,6 +25,15 @@ Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas
 * [rafacas/centos59-plain](https://vagrantcloud.com/rafacas/centos59-plain): CentOS 5.9 (64-bit), Virtualbox.
 * [rafacas/centos59-i386-plain](https://vagrantcloud.com/rafacas/centos59-i386-plain): CentOS 5.9 (32-bit), Virtualbox.
 
+### Ubuntu
+
+* [rafacas/ubuntu1404-plain](https://vagrantcloud.com/rafacas/ubuntu1404-plain): Ubuntu 14.04 (64-bit), Virtualbox.
+* [rafacas/ubuntu1404-i386-plain](https://vagrantcloud.com/rafacas/ubuntu1404-i386-plain): Ubuntu 14.04 (32-bit), Virtualbox.
+* [rafacas/ubuntu1204-plain](https://vagrantcloud.com/rafacas/ubuntu1204-plain): Ubuntu 12.04 (64-bit), Virtualbox.
+* [rafacas/ubuntu1204-i386-plain](https://vagrantcloud.com/rafacas/ubuntu1204-i386-plain): Ubuntu 12.04 (32-bit), Virtualbox.
+* [rafacas/ubuntu1004-plain](https://vagrantcloud.com/rafacas/ubuntu1004-plain): Ubuntu 10.04 (64-bit), Virtualbox.
+* [rafacas/ubuntu1004-i386-plain](https://vagrantcloud.com/rafacas/ubuntu1004-i386-plain): Ubuntu 10.04 (32-bit), Virtualbox.
+
 ## Usage
 
 `Vagrantfile` example:

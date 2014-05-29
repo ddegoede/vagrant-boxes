@@ -42,7 +42,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/centos-5.9-amd64-plainbox"
+      "output": "../../boxes/centos-5.9-amd64-plain.box"
     }
   ]
 }

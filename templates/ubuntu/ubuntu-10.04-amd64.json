@@ -1,0 +1,66 @@
+{
+  "builders": [
+    {
+      "vm_name": "ubuntu1004",
+      "guest_os_type": "Ubuntu_64",
+      "type": "virtualbox-iso",
+      "headless": true,
+      "http_directory": "http",
+      "iso_url": "http://releases.ubuntu.com/10.04.4/ubuntu-10.04.4-server-amd64.iso",
+      "iso_checksum": "796e80702d65f2ee96e88874a1ab437e24df9cd6",
+      "iso_checksum_type": "sha1",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "ssh_wait_timeout": "10000s",
+      "boot_command": [
+        "<esc><esc><enter><wait>",
+        "/install/vmlinuz auto",
+        " console-setup/ask_detect=false",
+        " console-setup/layoutcode=us",
+        " console-setup/modelcode=pc105",
+        " debconf/frontend=noninteractive",
+        " debian-installer=en_US",
+        " fb=false",
+        " initrd=/install/initrd.gz",
+        " kbd-chooser/method=us",
+        " keyboard-configuration/layout=USA",
+        " keyboard-configuration/variant=USA",
+        " locale=en_US",
+        " netcfg/get_domain=vm",
+        " netcfg/get_hostname=vagrant",
+        " noapic" ,
+        " preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg",
+        " -- ",
+        "<enter>"
+      ],
+      "disk_size": 8192,
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "512"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+      ],
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/sshd.sh",
+        "scripts/vbox.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "../../boxes/ubuntu-10.04-amd64-plain.box"
+    }
+  ]
+}

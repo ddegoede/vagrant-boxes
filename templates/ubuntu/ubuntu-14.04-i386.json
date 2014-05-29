@@ -1,0 +1,56 @@
+{
+  "builders": [
+    {
+      "vm_name": "ubuntu1404-i386",
+      "guest_os_type": "Ubuntu",
+      "type": "virtualbox-iso",
+      "headless": true,
+      "http_directory": "http",
+      "iso_url": "http://releases.ubuntu.com/14.04/ubuntu-14.04-server-i386.iso",
+      "iso_checksum": "33eb2ad62940aabe99f776f3c35ce90eaad6e2d2",
+      "iso_checksum_type": "sha1",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "ssh_wait_timeout": "10000s",
+      "boot_command": [
+        "<esc><esc><enter><wait>",
+        "/install/vmlinuz noapic ",
+        "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
+        "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
+        "hostname={{ .Name }} ",
+        "fb=false debconf/frontend=noninteractive ",
+        "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA ",
+        "keyboard-configuration/variant=USA console-setup/ask_detect=false ",
+        "initrd=/install/initrd.gz -- <enter>"
+      ],
+      "disk_size": 8192,
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "512"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+      ],
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/sshd.sh",
+        "scripts/vbox.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "../../boxes/ubuntu-14.04-i386-plain.box"
+    }
+  ]
+}

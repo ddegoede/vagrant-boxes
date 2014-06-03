@@ -34,11 +34,34 @@ Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas
 * [rafacas/ubuntu1004-plain](https://vagrantcloud.com/rafacas/ubuntu1004-plain): Ubuntu 10.04 (64-bit), Virtualbox.
 * [rafacas/ubuntu1004-i386-plain](https://vagrantcloud.com/rafacas/ubuntu1004-i386-plain): Ubuntu 10.04 (32-bit), Virtualbox.
 
+### Fedora
+
+* [rafacas/fedora20-plain](https://vagrantcloud.com/rafacas/fedora20-plain): Fedora 20 (64-bit), Virtualbox.
+* [rafacas/fedora20-i386-plain](https://vagrantcloud.com/rafacas/fedora20-i386-plain): Fedora 20 (32-bit), Virtualbox.
+* [rafacas/fedora19-plain](https://vagrantcloud.com/rafacas/fedora19-plain): Fedora 19 (64-bit), Virtualbox.
+* [rafacas/fedora19-i386-plain](https://vagrantcloud.com/rafacas/fedora19-i386-plain): Fedora 19 (32-bit), Virtualbox.
+* [rafacas/fedora18-plain](https://vagrantcloud.com/rafacas/fedora18-plain): Fedora 18 (64-bit), Virtualbox.
+* [rafacas/fedora18-i386-plain](https://vagrantcloud.com/rafacas/fedora18-i386-plain): Fedora 18 (32-bit), Virtualbox.
+
 ## Usage
 
-`Vagrantfile` example:
+Running the following command
 ```
-Vagrant.configure('2') do |config|
-  config.vm.box = 'rafacas/centos65-plain'
+$ vagrant init rafacas/fedora20-plain
+```
+
+would generate the following `Vagrantfile`:
+```
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "rafacas/fedora20-plain"
 end
 ```
+
+Now you only have to run:
+```
+$ vagrant up
+```
+
+and the box will be downloaded (the first time only) and the virtual machine will start up.

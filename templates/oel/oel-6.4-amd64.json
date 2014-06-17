@@ -1,0 +1,49 @@
+{
+  "builders": [
+    {
+      "vm_name": "oel64-amd64",
+      "guest_os_type": "RedHat_64",
+      "type": "virtualbox-iso",
+      "headless": true,
+      "http_directory": "http",
+      "iso_url": "http://mirrors.dotsrc.org/oracle-linux/OL6/U4/x86_64/OracleLinux-R6-U4-Server-x86_64-dvd.iso",
+      "iso_checksum": "4ecb72ade0186afe2f95ffc8273fc146e177e2f9",
+      "iso_checksum_type": "sha1",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "ssh_wait_timeout": "10000s",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks.cfg<enter>"
+      ],
+      "disk_size": 8192,
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "512"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+      ],
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "scripts": [
+        "scripts/kernel.sh",
+        "scripts/fix-slow-dns.sh",
+        "scripts/sshd.sh",
+        "scripts/vagrant.sh",
+        "scripts/vbox.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "../../boxes/oel-6.4-amd64-plain.box"
+    }
+  ]
+}

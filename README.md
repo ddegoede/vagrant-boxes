@@ -43,6 +43,23 @@ Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas
 * [rafacas/fedora18-plain](https://vagrantcloud.com/rafacas/fedora18-plain): Fedora 18 (64-bit), Virtualbox.
 * [rafacas/fedora18-i386-plain](https://vagrantcloud.com/rafacas/fedora18-i386-plain): Fedora 18 (32-bit), Virtualbox.
 
+### Oracle Enterprise Linux
+
+* [rafacas/oel65-plain](https://vagrantcloud.com/rafacas/oel65-plain): OEL 6.5 (64-bit), Virtualbox.
+* [rafacas/oel65-i386-plain](https://vagrantcloud.com/rafacas/oel65-i386-plain): OEL 6.5 (32-bit), Virtualbox.
+* [rafacas/oel64-plain](https://vagrantcloud.com/rafacas/oel64-plain): OEL 6.4 (64-bit), Virtualbox.
+* [rafacas/oel64-i386-plain](https://vagrantcloud.com/rafacas/oel64-i386-plain): OEL 6.4 (32-bit), Virtualbox.
+* [rafacas/oel63-plain](https://vagrantcloud.com/rafacas/oel63-plain): OEL 6.3 (64-bit), Virtualbox.
+* [rafacas/oel63-i386-plain](https://vagrantcloud.com/rafacas/oel63-i386-plain): OEL 6.3 (32-bit), Virtualbox.
+* [rafacas/oel62-plain](https://vagrantcloud.com/rafacas/oel62-plain): OEL 6.2 (64-bit), Virtualbox.
+* [rafacas/oel62-i386-plain](https://vagrantcloud.com/rafacas/oel62-i386-plain): OEL 6.2 (32-bit), Virtualbox.
+* [rafacas/oel61-plain](https://vagrantcloud.com/rafacas/oel61-plain): OEL 6.1 (64-bit), Virtualbox.
+* [rafacas/oel61-i386-plain](https://vagrantcloud.com/rafacas/oel61-i386-plain): OEL 6.1 (32-bit), Virtualbox.
+* [rafacas/oel510-plain](https://vagrantcloud.com/rafacas/oel510-plain): OEL 5.10 (64-bit), Virtualbox.
+* [rafacas/oel510-i386-plain](https://vagrantcloud.com/rafacas/oel510-i386-plain): OEL 5.10 (32-bit), Virutalbox.
+* [rafacas/oel59-plain](https://vagrantcloud.com/rafacas/oel59-plain): OEL 5.9 (64-bit), Virtualbox.
+* [rafacas/oel59-i386-plain](https://vagrantcloud.com/rafacas/oel59-i386-plain): OEL 5.9 (32-bit), Virtualbox.
+
 ## Usage
 
 Running the following command

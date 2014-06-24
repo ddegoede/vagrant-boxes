@@ -15,7 +15,7 @@
       "virtualbox_version_file": ".vbox_version",
       "ssh_wait_timeout": "10000s",
       "boot_command": [
-        "<tab> linux text biosdevname=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks-fedora18.cfg<enter><enter>"
+        "<tab> linux text biosdevname=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks-fedora18-19.cfg<enter><enter>"
       ],
       "disk_size": 8192,
       "vboxmanage": [

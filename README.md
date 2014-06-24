@@ -43,6 +43,15 @@ Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas
 * [rafacas/fedora18-plain](https://vagrantcloud.com/rafacas/fedora18-plain): Fedora 18 (64-bit), Virtualbox.
 * [rafacas/fedora18-i386-plain](https://vagrantcloud.com/rafacas/fedora18-i386-plain): Fedora 18 (32-bit), Virtualbox.
 
+### Debian
+
+* [rafacas/debian75-plain](https://vagrantcloud.com/rafacas/debian75-plain): Debian 7.5 (64-bit), Virtualbox.
+* [rafacas/debian75-i386-plain](https://vagrantcloud.com/rafacas/debian75-i386-plain): Debian 7.5 (32-bit), Virtualbox.
+* [rafacas/debian74-plain](https://vagrantcloud.com/rafacas/debian74-plain): Debian 7.4 (64-bit), Virtualbox.
+* [rafacas/debian74-i386-plain](https://vagrantcloud.com/rafacas/debian74-i386-plain): Debian 7.4 (32-bit), Virtualbox.
+* [rafacas/debian73-plain](https://vagrantcloud.com/rafacas/debian73-plain): Debian 7.3 (64-bit), Virtualbox.
+* [rafacas/debian73-i386-plain](https://vagrantcloud.com/rafacas/debian73-i386-plain): Debian 7.3 (32-bit), Virtualbox.
+
 ### Oracle Enterprise Linux
 
 * [rafacas/oel65-plain](https://vagrantcloud.com/rafacas/oel65-plain): OEL 6.5 (64-bit), Virtualbox.

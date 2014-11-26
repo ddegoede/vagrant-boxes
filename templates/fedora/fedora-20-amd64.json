@@ -41,7 +41,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/fedora-20-plain.box"
+      "output": "../../boxes/fedora-20-amd64-plain.box"
     }
   ]
 }

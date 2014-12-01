@@ -9,6 +9,8 @@ Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas
 ### CentOS
 
 * [rafacas/centos70-plain](https://vagrantcloud.com/rafacas/centos70-plain): CentOS 7.0 (64-bit), Virtualbox.
+* [rafacas/centos66-plain](https://vagrantcloud.com/rafacas/centos66-plain): Centos 6.6 (64-bit), Virtualbox.
+* [rafacas/centos66-i386-plain](https://vagrantcloud.com/rafacas/centos66-i386-plain): Centos 6.6 (32-bit), Virtualbox.
 * [rafacas/centos65-plain](https://vagrantcloud.com/rafacas/centos65-plain): CentOS 6.5 (64-bit), Virtualbox.
 * [rafacas/centos65-i386-plain](https://vagrantcloud.com/rafacas/centos65-i386-plain): CentOS 6.5 (32-bit), Virtualbox.
 * [rafacas/centos64-plain](https://vagrantcloud.com/rafacas/centos64-plain): CentOS 6.4 (64-bit), Virtualbox.
@@ -58,6 +60,8 @@ Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas
 ### Oracle Enterprise Linux
 
 * [rafacas/oel70-plain](https://vagrantcloud.com/rafacas/oel70-plain): OEL 7.0 (64-bit), Virtualbox.
+* [rafacas/oel66-plain](https://vagrantcloud.com/rafacas/oel66-plain): OEL 6.6 (64-bit), Virtualbox.
+* [rafacas/oel66-i386-plain](https://vagrantcloud.com/rafacas/oel66-i386-plain): OEL 6.6 (32-bit), Virtualbox.
 * [rafacas/oel65-plain](https://vagrantcloud.com/rafacas/oel65-plain): OEL 6.5 (64-bit), Virtualbox.
 * [rafacas/oel65-i386-plain](https://vagrantcloud.com/rafacas/oel65-i386-plain): OEL 6.5 (32-bit), Virtualbox.
 * [rafacas/oel64-plain](https://vagrantcloud.com/rafacas/oel64-plain): OEL 6.4 (64-bit), Virtualbox.

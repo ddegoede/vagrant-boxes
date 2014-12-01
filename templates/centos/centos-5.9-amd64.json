@@ -1,4 +1,7 @@
 {
+  "variables": {
+      "version": "1.0.1"
+  },
   "builders": [
     {
       "vm_name": "centos59-amd64",
@@ -42,7 +45,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/centos-5.9-amd64-plain.box"
+      "output": "../../boxes/centos-5.9-amd64-plain-{{user `version`}}.box"
     }
   ]
 }

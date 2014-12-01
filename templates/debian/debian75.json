@@ -1,4 +1,7 @@
 {
+  "variables":{
+      "version": "1.0.1"
+  },
   "builders": [
   {
       "vm_name": "debian75",
@@ -50,7 +53,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/debian-7.5-amd64-plain.box"
+      "output": "../../boxes/debian-7.5-amd64-plain-{{user `version`}}.box"
     }
   ]
 }

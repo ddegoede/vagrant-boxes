@@ -1,4 +1,7 @@
 {
+  "variables":{
+      "version": "1.0.1"
+  },
   "builders": [
     {
       "vm_name": "centos65-i386",
@@ -42,7 +45,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/centos-6.5-i386-plain.box"
+      "output": "../../boxes/centos-6.5-i386-plain-{{user `version`}}.box"
     }
   ]
 }

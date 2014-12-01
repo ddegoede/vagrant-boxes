@@ -43,7 +43,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../oel-5.9-i386-plain.box"
+      "output": "../../boxes/oel-5.9-i386-plain.box"
     }
   ]
 }

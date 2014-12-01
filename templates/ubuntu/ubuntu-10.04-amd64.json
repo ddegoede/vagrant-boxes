@@ -1,4 +1,7 @@
 {
+  "variables":{
+      "version": "1.0.1"
+  },
   "builders": [
     {
       "vm_name": "ubuntu1004",
@@ -60,7 +63,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/ubuntu-10.04-amd64-plain.box"
+      "output": "../../boxes/ubuntu-10.04-amd64-plain-{{user `version`}}.box"
     }
   ]
 }

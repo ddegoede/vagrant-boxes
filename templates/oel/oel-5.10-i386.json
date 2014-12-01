@@ -1,4 +1,7 @@
 {
+  "variables": {
+      "version": "1.0.1"
+  },
   "builders": [
     {
       "vm_name": "oel510-i386",
@@ -43,7 +46,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/oel-5.10-i386-plain.box"
+      "output": "../../boxes/oel-5.10-i386-plain-{{user `version`}}.box"
     }
   ]
 }

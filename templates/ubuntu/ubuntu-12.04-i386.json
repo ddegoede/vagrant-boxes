@@ -1,4 +1,7 @@
 {
+  "variables":{
+      "version": "1.0.1"
+  },
   "builders": [
     {
       "vm_name": "ubuntu1204-i386",
@@ -50,7 +53,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/ubuntu-12.04-i386-plain.box"
+      "output": "../../boxes/ubuntu-12.04-i386-plain-{{user `version`}}.box"
     }
   ]
 }

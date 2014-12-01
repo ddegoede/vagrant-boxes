@@ -1,4 +1,7 @@
 {
+  "variables": {
+      "version": "1.0.1"
+  },
   "builders": [
     {
       "vm_name": "oel63-i386",
@@ -15,7 +18,7 @@
       "virtualbox_version_file": ".vbox_version",
       "ssh_wait_timeout": "10000s",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks6.cfg<enter>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks5.cfg<enter>"
       ],
       "disk_size": 8192,
       "vboxmanage": [
@@ -43,7 +46,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/oel-6.3-i386-plain.box"
+      "output": "../../boxes/oel-6.3-i386-plain-{{user `version`}}.box"
     }
   ]
 }

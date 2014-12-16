@@ -77,6 +77,12 @@ Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas
 * [rafacas/oel59-plain](https://vagrantcloud.com/rafacas/oel59-plain): OEL 5.9 (64-bit), Virtualbox.
 * [rafacas/oel59-i386-plain](https://vagrantcloud.com/rafacas/oel59-i386-plain): OEL 5.9 (32-bit), Virtualbox.
 
+### FreeBSD
+* [rafacas/freebsd101-plain](https://vagrantcloud.com/rafacas/freebsd101-plain): FreeBSD 10.1 (64-bit), Virtualbox.
+* [rafacas/freebsd101-i386-plain](https://vagrantcloud.com/rafacas/freebsd101-i386-plain): FreeBSD 10.1 (32-bit), Virtualbox.
+* [rafacas/freebsd100-plain](https://vagrantcloud.com/rafacas/freebsd100-plain): FreeBSD 10.0 (64-bit), Virtualbox.
+* [rafacas/freebsd100-i386-plain](https://vagrantcloud.com/rafacas/freebsd100-i386-plain): FreeBSD 10.0 (32-bit), Virtualbox.
+
 ## Usage
 
 Running the following command
@@ -99,3 +105,19 @@ $ vagrant up
 ```
 
 and the box will be downloaded (the first time only) and the virtual machine will start up.
+
+### Notes for the FreeBSD boxes
+
+When using the FreeBSD base boxes the NFS synced folders has to be enabled. Before using it, the host machine must have ```nfsd``` installed (for more info see [the NFS section in the Vagrant docs](https://docs.vagrantup.com/v2/synced-folders/nfs.html)).
+
+Some 'special' stuff should be added to the Vagrantfile:
+* Enable HostOnly network:
+```
+config.vm.network "private_network", ip: "192.168.33.10"
+```
+* Enable NFS synced folders
+```
+config.vm.synced_folder ".", "/vagrant", type: "nfs"
+```
+
+

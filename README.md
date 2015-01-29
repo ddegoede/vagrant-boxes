@@ -2,7 +2,7 @@
 
 Packer Templates for building Vagrant boxes.
 
-Boxes are built and released on [Vagrant Cloud](https://vagrantcloud.com/rafacas). 
+Boxes are built and released on [Atlas](https://atlas.hashicorp.com/rafacas).
 
 ## Current Boxes
 

@@ -1,0 +1,50 @@
+{
+  "variables":{
+      "version": "1.0.0"
+  },
+  "builders": [
+    {
+      "vm_name": "fedora21",
+      "type": "virtualbox-iso",
+      "guest_os_type": "Fedora_64",
+      "headless": true,
+      "http_directory": "http",
+      "iso_url": "http://download.fedoraproject.org/pub/fedora/linux/releases/21/Server/x86_64/iso/Fedora-Server-DVD-x86_64-21.iso",
+      "iso_checksum": "a6a2e83bb409d6b8ee3072ad07faac0a54d79c9ecbe3a40af91b773e2d843d8e",
+      "iso_checksum_type": "sha256",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "ssh_wait_timeout": "10000s",
+      "boot_command": [
+        "<tab> linux text biosdevname=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks.cfg<enter><enter>"
+      ],
+      "disk_size": 8192,
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "512"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+      ],
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "scripts": [
+        "scripts/sshd.sh",
+        "scripts/vagrant.sh",
+        "scripts/vbox.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "../../boxes/fedora-21-amd64-plain-{{user `version`}}.box"
+    }
+  ]
+}

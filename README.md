@@ -39,6 +39,8 @@ Boxes are built and released on [Atlas](https://atlas.hashicorp.com/rafacas).
 
 ### Fedora
 
+* [rafacas/fedora21-plain](https://atlas.hashicorp.com/rafacas/boxes/fedora21-plain): Fedora 21 (64-bit), Virtualbox.
+* [rafacas/fedora21-i386-plain](https://atlas.hashicorp.com/rafacas/boxes/fedora21-i386-plain): Fedora 21 (32-bit), Virtualbox.
 * [rafacas/fedora20-plain](https://vagrantcloud.com/rafacas/fedora20-plain): Fedora 20 (64-bit), Virtualbox.
 * [rafacas/fedora20-i386-plain](https://vagrantcloud.com/rafacas/fedora20-i386-plain): Fedora 20 (32-bit), Virtualbox.
 * [rafacas/fedora19-plain](https://vagrantcloud.com/rafacas/fedora19-plain): Fedora 19 (64-bit), Virtualbox.

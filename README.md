@@ -30,6 +30,8 @@ Boxes are built and released on [Atlas](https://atlas.hashicorp.com/rafacas).
 
 ### Ubuntu
 
+* [rafacas/ubuntu1410-plain](https://atlas.hashicorp.com/rafacas/ubuntu1410-plain): Ubuntu 14.10 (64-bit), Virtualbox.
+* [rafacas/ubuntu1410-i386-plain](https://atlas.hashicorp.com/rafacas/ubuntu1410-i386-plain): Ubuntu 14.10 (32-bit), Virtualbox.
 * [rafacas/ubuntu1404-plain](https://atlas.hashicorp.com/rafacas/ubuntu1404-plain): Ubuntu 14.04 (64-bit), Virtualbox.
 * [rafacas/ubuntu1404-i386-plain](https://atlas.hashicorp.com/rafacas/ubuntu1404-i386-plain): Ubuntu 14.04 (32-bit), Virtualbox.
 * [rafacas/ubuntu1204-plain](https://atlas.hashicorp.com/rafacas/ubuntu1204-plain): Ubuntu 12.04 (64-bit), Virtualbox.
@@ -50,6 +52,10 @@ Boxes are built and released on [Atlas](https://atlas.hashicorp.com/rafacas).
 
 ### Debian
 
+* [rafacas/debian78-plain](https://atlas.hashicorp.com/rafacas/debian78-plain): Debian 7.8 (64-bit), Virtualbox.
+* [rafacas/debian78-i386-plain](https://atlas.hashicorp.com/rafacas/debian78-i386-plain): Debian 7.8 (32-bit), Virtualbox.
+* [rafacas/debian77-plain](https://atlas.hashicorp.com/rafacas/debian77-plain): Debian 7.7 (64-bit), Virtualbox.
+* [rafacas/debian77-i386-plain](https://atlas.hashicorp.com/rafacas/debian77-i386-plain): Debian 7.7 (32-bit), Virtualbox.
 * [rafacas/debian76-plain](https://atlas.hashicorp.com/rafacas/debian76-plain): Debian 7.6 (64-bit), Virtualbox.
 * [rafacas/debian76-i386-plain](https://atlas.hashicorp.com/rafacas/debian76-i386-plain): Debian 7.6 (32-bit), Virtualbox.
 * [rafacas/debian75-plain](https://atlas.hashicorp.com/rafacas/debian75-plain): Debian 7.5 (64-bit), Virtualbox.

@@ -1,4 +1,7 @@
 {
+  "variables":{
+     "version": "1.0.2"
+  },
   "builders": [
     {
       "vm_name": "centos70",
@@ -42,7 +45,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "../../boxes/centos-7.0-amd64-plain.box"
+      "output": "../../boxes/centos-7.0-amd64-plain-{{user `version`}}.box"
     }
   ]
 }

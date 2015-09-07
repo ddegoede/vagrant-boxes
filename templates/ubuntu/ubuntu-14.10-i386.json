@@ -1,13 +1,13 @@
 {
   "variables":{
-      "version": "1.0.0"
+      "version": "1.0.1"
   },
   "builders": [
     {
       "vm_name": "ubuntu1410-i386",
       "guest_os_type": "Ubuntu",
       "type": "virtualbox-iso",
-      "headless": false,
+      "headless": true,
       "http_directory": "http",
       "iso_url": "http://releases.ubuntu.com/14.10/ubuntu-14.10-server-i386.iso",
       "iso_checksum": "26faf47df2162f4ff83e38e6831dd169da6db95f",

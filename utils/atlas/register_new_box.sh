@@ -79,8 +79,8 @@ function create_version {
     virtualbox_version=`virtualbox --help | head -n1 | awk '{print $NF}'`
     file_size=`du -kh ${BOX} | cut -f1`
     version_desc="${DISTRO_NAME_UP} ${DISTRO_VERSION} (${ARCH_DESC})
-    * VBoxGuestAdditions $virtualbox_version
-    * $file_size"
+  * VBoxGuestAdditions $virtualbox_version
+  * $file_size"
     curl -X POST ${ATLAS_URI}/${BOX_NAME}/versions \
         -d version[version]="${BOX_VERSION}" \
         -d version[description]="$version_desc" \

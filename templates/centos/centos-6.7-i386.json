@@ -1,0 +1,52 @@
+{
+  "variables":{
+      "version": "1.0.0"
+  },
+  "builders": [
+    {
+      "vm_name": "centos67-i386",
+      "guest_os_type": "RedHat",
+      "type": "virtualbox-iso",
+      "headless": true,
+      "http_directory": "http",
+      "iso_checksum": "f3aa74fd6ddc7b14ed4cf81db8135aee57814791",
+      "iso_checksum_type": "sha1",
+      "iso_url": "http://mirrors.kernel.org/centos/6.7/isos/i386/CentOS-6.7-i386-bin-DVD1.iso",
+      "ssh_password": "vagrant",
+      "ssh_username": "vagrant",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "ssh_wait_timeout": "10000s",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks6.cfg<enter>"
+      ],
+      "disk_size": 8192,
+      "vboxmanage": [
+        ["modifyvm", "{{.Name}}", "--memory", "512"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"]
+      ],
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "scripts": [
+        "scripts/fix-slow-dns.sh",
+        "scripts/sshd.sh",
+        "scripts/vagrant.sh",
+        "scripts/vbox.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "../../boxes/centos-6.7-i386-plain-{{user `version`}}.box"
+    }
+  ]
+}
+

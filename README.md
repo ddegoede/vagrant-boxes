@@ -8,7 +8,10 @@ Boxes are built and released on [Atlas](https://atlas.hashicorp.com/rafacas).
 
 ### CentOS
 
+* [rafacas/centos71-plain](https://atlas.hashicorp.com/rafacas/centos71-plain): CentOS 7.1 (64-bit), Virtualbox.
 * [rafacas/centos70-plain](https://atlas.hashicorp.com/rafacas/centos70-plain): CentOS 7.0 (64-bit), Virtualbox.
+* [rafacas/centos67-plain](https://atlas.hashicorp.com/rafacas/centos67-plain): Centos 6.7 (64-bit), Virtualbox.
+* [rafacas/centos67-i386-plain](https://atlas.hashicorp.com/rafacas/centos67-i386-plain): Centos 6.7 (32-bit), Virtualbox.
 * [rafacas/centos66-plain](https://atlas.hashicorp.com/rafacas/centos66-plain): Centos 6.6 (64-bit), Virtualbox.
 * [rafacas/centos66-i386-plain](https://atlas.hashicorp.com/rafacas/centos66-i386-plain): Centos 6.6 (32-bit), Virtualbox.
 * [rafacas/centos65-plain](https://atlas.hashicorp.com/rafacas/centos65-plain): CentOS 6.5 (64-bit), Virtualbox.

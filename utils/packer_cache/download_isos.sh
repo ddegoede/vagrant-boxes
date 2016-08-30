@@ -15,7 +15,8 @@
 while read line; do
     isoname=`echo $line | awk '{print $1}'`
     url=`echo $line | awk '{print $2}'`
-    sha256=`echo -n "$url" | shasum -a 256 | awk '{print $1}'`
+    sha1=`echo -n "$url" | openssl sha1`
+    sha256=`echo -n "${sha1}.iso" | shasum -a 256 | awk '{print $1}'`
     # Check if iso file exists
     if [ -f ${sha256}.iso ]; then
         echo "Skipping $isoname download. ${sha256}.iso exists."

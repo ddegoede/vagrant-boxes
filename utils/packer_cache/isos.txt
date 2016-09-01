@@ -1,3 +1,7 @@
+centos-7.1-amd64.iso http://mirror.nsc.liu.se/centos-store/7.1.1503/isos/x86_64/CentOS-7-x86_64-DVD-1503-01.iso
+centos-7.0-amd64.iso http://mirror.nsc.liu.se/centos-store/7.0.1406/isos/x86_64/CentOS-7.0-1406-x86_64-DVD.iso
+centos-6.7-i386.iso http://mirror.nsc.liu.se/centos-store/6.7/isos/i386/CentOS-6.7-i386-bin-DVD1.iso
+centos-6.7-amd64.iso http://mirror.nsc.liu.se/centos-store/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso
 centos-6.6-i386.iso http://mirror.nsc.liu.se/centos-store/6.6/isos/i386/CentOS-6.6-i386-bin-DVD1.iso
 centos-6.6-amd64.iso http://mirror.nsc.liu.se/centos-store/6.6/isos/x86_64/CentOS-6.6-x86_64-bin-DVD1.iso
 centos-6.5-i386.iso http://mirror.nsc.liu.se/centos-store/6.5/isos/i386/CentOS-6.5-i386-bin-DVD1.iso

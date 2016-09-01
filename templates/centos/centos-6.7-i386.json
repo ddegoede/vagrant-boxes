@@ -11,7 +11,7 @@
       "http_directory": "http",
       "iso_checksum": "f3aa74fd6ddc7b14ed4cf81db8135aee57814791",
       "iso_checksum_type": "sha1",
-      "iso_url": "http://mirrors.kernel.org/centos/6.7/isos/i386/CentOS-6.7-i386-bin-DVD1.iso",
+      "iso_url": "http://mirror.nsc.liu.se/centos-store/6.7/isos/i386/CentOS-6.7-i386-bin-DVD1.iso",
       "ssh_password": "vagrant",
       "ssh_username": "vagrant",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",

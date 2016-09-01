@@ -9,7 +9,7 @@
       "type": "virtualbox-iso",
       "headless": true,
       "http_directory": "http",
-      "iso_url": "http://mirrors.kernel.org/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso",
+      "iso_url": "http://mirror.nsc.liu.se/centos-store/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso",
       "iso_checksum": "7bb8c1c23a4fdef93e6f0a6347d570e5764d0b38",
       "iso_checksum_type": "sha1",
       "ssh_password": "vagrant",

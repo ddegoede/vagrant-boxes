@@ -9,7 +9,7 @@
       "type": "virtualbox-iso",
       "headless": true,
       "http_directory": "http",
-      "iso_url": "http://mirror.stanford.edu/yum/pub/centos/5.10/isos/x86_64/CentOS-5.10-x86_64-bin-DVD-1of2.iso",
+      "iso_url": "http://mirror.nsc.liu.se/centos-store/isos/x86_64/CentOS-6.5-x86_64-bin-DVD1.iso",
       "iso_checksum": "d8403b3fe4972eda3e147ee76d682a4a3beae1e1",
       "iso_checksum_type": "sha1",
       "ssh_username": "vagrant",

@@ -9,7 +9,7 @@
       "type": "virtualbox-iso",
       "headless": true,
       "http_directory": "http",
-      "iso_url": "http://mirror.symnds.com/distributions/CentOS-vault/5.9/isos/i386/CentOS-5.9-i386-bin-DVD-1of2.iso",
+      "iso_url": "http://mirror.nsc.liu.se/centos-store/5.9/isos/i386/CentOS-5.9-i386-bin-DVD-1of2.iso",
       "iso_checksum": "78f976b190ce44716eb672f71203df978474dfb4",
       "iso_checksum_type": "sha1",
       "ssh_username": "vagrant",

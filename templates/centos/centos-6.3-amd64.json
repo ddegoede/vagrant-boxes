@@ -9,7 +9,7 @@
       "type": "virtualbox-iso",
       "headless": true,
       "http_directory": "http",
-      "iso_url": "http://mirror.symnds.com/distributions/CentOS-vault/6.3/isos/x86_64/CentOS-6.3-x86_64-bin-DVD1.iso",
+      "iso_url": "http://mirror.nsc.liu.se/centos-store/6.3/isos/x86_64/CentOS-6.3-x86_64-bin-DVD1.iso",
       "iso_checksum": "eaa52f3d1ccf2df3b03e064fb0fa6168be28a4d4",
       "iso_checksum_type": "sha1",
       "ssh_username": "vagrant",

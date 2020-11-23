@@ -1,36 +1,47 @@
 {
-  "variables":{
-      "version": "1.0.2"
-  },
   "builders": [
     {
-      "vm_name": "fedora18",
-      "type": "virtualbox-iso",
-      "guest_os_type": "Fedora_64",
-      "headless": true,
-      "http_directory": "http",
-      "iso_url": "http://mirrors.kernel.org/fedora/releases/18/Fedora/x86_64/iso/Fedora-18-x86_64-DVD.iso",
-      "iso_checksum": "91c5f0aca391acf76a047e284144f90d66d3d5f5dcd26b01f368a43236832c03",
-      "iso_checksum_type": "sha256",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
-      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "virtualbox_version_file": ".vbox_version",
-      "ssh_wait_timeout": "10000s",
       "boot_command": [
         "<tab> linux text biosdevname=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks-fedora18-19.cfg<enter><enter>"
       ],
-      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "disk_size": 8192,
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "guest_os_type": "Fedora_64",
+      "headless": true,
+      "http_directory": "http",
+      "iso_checksum": "sha256:91c5f0aca391acf76a047e284144f90d66d3d5f5dcd26b01f368a43236832c03",
+      "iso_url": "http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/18/Fedora/x86_64/iso/Fedora-18-x86_64-DVD.iso",
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "10000s",
+      "ssh_username": "vagrant",
+      "type": "virtualbox-iso",
       "vboxmanage": [
-        ["modifyvm", "{{.Name}}", "--memory", "512"],
-        ["modifyvm", "{{.Name}}", "--cpus", "1"]
-      ]
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "512"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "1"
+        ]
+      ],
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "fedora18"
+    }
+  ],
+  "post-processors": [
+    {
+      "output": "../../boxes/fedora-18-amd64-plain-{{user `version`}}.box",
+      "type": "vagrant"
     }
   ],
   "provisioners": [
     {
-      "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
       "scripts": [
         "scripts/sshd.sh",
@@ -38,13 +49,11 @@
         "scripts/vbox.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
-      ]
+      ],
+      "type": "shell"
     }
   ],
-  "post-processors": [
-    {
-      "type": "vagrant",
-      "output": "../../boxes/fedora-18-amd64-plain-{{user `version`}}.box"
-    }
-  ]
+  "variables": {
+    "version": "1.0.2"
+  }
 }
